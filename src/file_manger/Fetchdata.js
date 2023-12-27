@@ -10,7 +10,7 @@ const Fetch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://interior-design.stg.initz.run/v1/api/getfile/');
+        const response = await fetch('https://interior-backend.stg.initz.run//v1/api/getfile/');
         const result = await response.json();
         setData(result.data);
       } catch (error) {

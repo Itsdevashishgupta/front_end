@@ -34,7 +34,7 @@ const FileUploadForm = ({ onUpload, onClose }) => {
       formData.append('file', fileDetails.file);
 
       // Make a POST request to the API endpoint with FormData
-      const response = await axios.post('https://interior-design.stg.initz.run/v1/api/fileupload/', formData, {
+      const response = await axios.post('https://interior-backend.stg.initz.run//v1/api/fileupload/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -54,7 +54,6 @@ const FileUploadForm = ({ onUpload, onClose }) => {
      
     } catch (error) {
       console.error('Error uploading file:', error);
-     
     }
   };
 
@@ -67,7 +66,7 @@ const FileUploadForm = ({ onUpload, onClose }) => {
             <form>
               <label>
                 Title:
-                <input
+                <input className=''
                   type="text"
                   name="title"
                   value={fileDetails.title}
