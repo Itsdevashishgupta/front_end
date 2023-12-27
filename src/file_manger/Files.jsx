@@ -16,7 +16,7 @@ const Files = () => {
   
 
   useEffect(() => {
-    axios.get('http://localhost:8000/v1/api/getfile/')
+    axios.get('https://interior-design.stg.initz.run/v1/api/getfile/')
       .then(response => {
         setData(response.data);
       })
